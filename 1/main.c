@@ -7,7 +7,9 @@
 
 int main(int argc, char *argv[]) {
 	int sum = 0;
+	// Loop from 1...999
 	for (int i = 1; i < 1000; i++) {
+		// If divisible by 3 or 5
 		if (i % 3 == 0 || i % 5 == 0) {
 			sum += i;
 		}
