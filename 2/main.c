@@ -3,11 +3,7 @@
 //		https://projecteuler.net/problem=2
 // ----------------------------------------
 
-#include <stdlib.h>
 #include <stdio.h>
-#include <stdint.h>
-#include <stdbool.h>
-#include <inttypes.h>
 
 #define MAX_FIB 4000000
 
