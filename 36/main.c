@@ -39,17 +39,17 @@ bool palindrome(int i, uint8_t b)
 
     itoa(i, string, (int)b);
 
-    // Index A starts at the first char, B at the last
-    int a = 0;
-    int b = strlen(string) - 1;
+    // Index G starts at the first char, H at the last
+    int g = 0;
+    int h = strlen(string) - 1;
 
     // Move A and B together, and if at any point their chars don't match then it's not a palindrome
-    while (a < b) {
-        if (string[a] != string[b]) {
+    while (g < h) {
+        if (string[g] != string[h]) {
             return false;
         }
-        a++;
-        b--;
+        g++;
+        h--;
     }
 
     return true;
