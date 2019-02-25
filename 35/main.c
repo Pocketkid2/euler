@@ -19,7 +19,10 @@
 int main(int argc, char *argv[]) {
 
     // Initialize prime array
-    bool prime[SIZE] = { true };
+    bool prime[SIZE];
+    for (int i = 2; i < SIZE; i++) {
+        prime[i] = true;
+    }
 
     // Mark off all non-primes
     for (int i = 2; i <= SQRT; i++) {
