@@ -38,4 +38,19 @@ bool palindrome(int i, uint8_t b)
     char string[STRLEN];
 
     itoa(i, string, (int)b);
+
+    // Index A starts at the first char, B at the last
+    int a = 0;
+    int b = strlen(string) - 1;
+
+    // Move A and B together, and if at any point their chars don't match then it's not a palindrome
+    while (a < b) {
+        if (string[a] != string[b]) {
+            return false;
+        }
+        a++;
+        b--;
+    }
+
+    return true;
 }
