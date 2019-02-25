@@ -13,6 +13,29 @@
 #include <time.h>
 #include <string.h>
 
+#define MAXNUM 1000000
+#define STRLEN 25
+
+// Checks whether integer i is a palindrome in base b (base must be positive)
+bool palindrome(int i, uint8_t b);
+
 int main(int argc, char *argv[]) {
 
+    uint64_t sum = 0;
+
+    for (int i = 1; i < MAXNUM; i++) {
+        if (palindrome(i, 2) && palindrome(i, 10)) {
+            sum += i;
+            printf("Adding number %d\n", i);
+        }
+    }
+
+    printf("Sum = %" PRIu64 "\n", sum);
+}
+
+bool palindrome(int i, uint8_t b)
+{
+    char string[STRLEN];
+
+    itoa(i, string, (int)b);
 }
