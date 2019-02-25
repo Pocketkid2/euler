@@ -13,21 +13,19 @@
 #include <time.h>
 #include <string.h>
 
+#define MAXNUM 10000
+
 // Returns true if A, B, and C together are 1 - 9 pandigital
 // A x B must = C
 bool pandigital(int a, int b, int c);
 
 int main(int argc, char *argv[]) {
-    if (argc == 4) {
-        int a = atoi(argv[1]);
-        int b = atoi(argv[2]);
-        int c = atoi(argv[3]);
-        printf("Checking %d x %d = %d\n", a, b, c);
-        if (a * b == c) {
-            printf("Equation checks out\n");
-        }
-        if (pandigital(a, b, c)) {
-            printf("Pandigital\n");
+
+    for (int i = 1; i < MAXNUM; i++) {
+        for (int j = 0; j < MAXNUM; j++) {
+            if (pandigital(i, j, i * j)) {
+                printf("Found pandigital: %d x %d = %d\n", i, j, i * j);
+            }
         }
     }
 }
